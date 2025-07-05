@@ -1,4 +1,4 @@
-# Frontend SSR Dockerfile
+# Frontend Dockerfile
 FROM node:20-alpine
 
 WORKDIR /app
@@ -9,8 +9,7 @@ RUN npm install
 COPY . .
 
 RUN npm run build
-RUN npm install express
 
-EXPOSE 4173
+EXPOSE 5173
 
-CMD ["node", "src/ssr-server.js"]
+CMD ["npm", "run", "preview", "--", "--host", "0.0.0.0"]
