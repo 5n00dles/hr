@@ -5,4 +5,14 @@
   "postCreateCommand": "cd webapp-ui && npm install && npm run build && cd ../webapp-server && pip install --upgrade pip && pip install -r requirements.txt",
   "postStartCommand": "(cd webapp-ui && nohup npm run preview -- --host 0.0.0.0 &) && (cd webapp-server && nohup python app.py &)",
   "workspaceFolder": "/workspaces/webapp"
+  ,
+  "features": {
+    "ghcr.io/devcontainers/features/git:1": {},
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "lts"
+    },
+    "ghcr.io/devcontainers/features/python:1": {
+      "version": "3.11"
+    }
+  }
 }
