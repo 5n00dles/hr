@@ -1,3 +1,5 @@
+# Dockerfile for webapp-ui: builds and serves the Vite React frontend
+
 FROM node:20-alpine
 
 WORKDIR /app
