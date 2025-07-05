@@ -4,7 +4,7 @@
   "forwardPorts": [5173, 8000],
   "postCreateCommand": "cd webapp-ui && npm install && npm run build && cd ../webapp-server && pip install --upgrade pip && pip install -r requirements.txt",
   "postStartCommand": "(cd webapp-ui && nohup npm run preview -- --host 0.0.0.0 &) && (cd webapp-server && nohup python app.py &)",
-  "workspaceFolder": "/workspaces/webapp"
+  "workspaceFolder": "/workspaces/hr"
   ,
   "features": {
     "ghcr.io/devcontainers/features/git:1": {},
