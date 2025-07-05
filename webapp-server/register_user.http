@@ -1,0 +1,9 @@
+### Register a new user
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+  "username": "testuser",
+  "password": "testpass",
+  "role": "edit"
+}

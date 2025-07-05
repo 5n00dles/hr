@@ -1,0 +1,19 @@
+### Create a new employee with detailed structure
+POST http://localhost:5000/employees
+Content-Type: application/json
+
+{
+  "name": "Alice Johnson",
+  "address": "789 Oak Ave, Gotham",
+  "phone_number": "555-2468",
+  "government_id": "B9876543",
+  "previous_experience": [
+    {"company": "TechCorp", "position": "QA Engineer", "years": 1},
+    {"company": "InnovateX", "position": "DevOps Engineer", "years": 2}
+  ],
+  "salary_history": [
+    {"year": 2022, "salary": 55000, "currency": "USD", "position": "QA Engineer"},
+    {"year": 2023, "salary": 60000, "currency": "USD", "position": "DevOps Engineer"}
+  ],
+  "current_position_details": "Site Reliability Engineer"
+}

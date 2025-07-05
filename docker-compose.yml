@@ -1,0 +1,24 @@
+version: "3.9"
+
+services:
+  server:
+    build:
+      context: ./webapp-server
+      dockerfile: Dockerfile
+    volumes:
+      - ./webapp-server/employees.db:/app/employees.db
+    ports:
+      - "5000:5000"
+    environment:
+      - FLASK_ENV=production
+
+  ui:
+    build:
+      context: ./webapp-ui
+      dockerfile: Dockerfile
+    ports:
+      - "4173:4173"
+    environment:
+      - VITE_API_URL=http://server:5000
+    depends_on:
+      - server
