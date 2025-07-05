@@ -4,7 +4,7 @@
 
 - [Docker](https://www.docker.com/products/docker-desktop) and [Docker Compose](https://docs.docker.com/compose/)
 
-## Quick Start (with SSR)
+## Quick Start
 
 1. **Clone this repository** and open the project folder.
 
@@ -14,7 +14,7 @@
    ```
 
 3. **Access the app:**
-   - **Frontend (SSR UI):** [http://localhost:4173](http://localhost:4173)
+   - **Frontend (UI):** [http://localhost:4173](http://localhost:4173)
    - **Backend (API):** [http://localhost:5000](http://localhost:5000)
 
 4. **Default Login:**
@@ -29,22 +29,6 @@
 - The backend code is in `webapp-server/`
 - The frontend code is in `webapp-ui/`
 - The SQLite database is persisted as `webapp-server/employees.db`
-
-## SSR (Server-Side Rendering)
-
-- The UI runs in SSR mode by default in Docker Compose.
-- To run SSR locally (without Docker):
-  1. Build the client:
-     ```sh
-     cd webapp-ui
-     npm install
-     npm run build
-     ```
-  2. Start the SSR server:
-     ```sh
-     node ssr-server.js
-     ```
-  3. Visit [http://localhost:4173](http://localhost:4173)
 
 ## Useful Commands
 
