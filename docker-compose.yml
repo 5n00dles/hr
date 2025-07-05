@@ -19,6 +19,6 @@ services:
     ports:
       - "4173:4173"
     environment:
-      - VITE_API_URL=http://server:5000
+      - VITE_BACKEND_URL=http://server:5000
     depends_on:
       - server
